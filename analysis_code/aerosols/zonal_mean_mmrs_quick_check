@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul  1 08:51:58 2024
+
+@author: nn819853
+"""
+
+
+import sys
+sys.path.append('/home/users/nn819853/Documents/python_code')
+
+import diagnostics.radiative_fluxes.fluxes_module as flux_mod
+import diagnostics.file_locations_module as file_loc
+import numpy as np
+import iris
+import iris.plot as iplt
+import matplotlib.pyplot as plt
+import copy
+import character_shortcuts as char
+import iris.quickplot as qplt
+
+
+# set directory name 
+diag_folder = 'aerosols/'
+diag_dir = file_loc.diag_dir + diag_folder
+plot_dir = file_loc.plot_dir + 'aerosols/'
+
+
+# ### Load in time mean mode separated mass aerosol per mass of air data
+# # create list to contain a CubeList of four cubes (modes) from each suite
+# cubelists = []
+
+# # list of suite names: free, uv-nudged, uvt-nudged
+# suite_names = [\
+#                 'br793',
+#                 'bv046',
+#                 'ce067',
+#                 'cb349',
+#                 'cb350',
+#                 'ce304',
+#                 'cb108',
+#                 'cb109',
+#                 'ce303',
+#                ]
+
+# # calculate number of suites
+# no_suites = len(suite_names)
+
+# # load cubes into cubelists
+# for i in range(no_suites):
+#     cubes = iris.load(diag_dir + 'aer_burden_mmr_su_' \
+#                       + suite_names[i] + '_time_mean.pp')
+        
+#     cubelists.append(cubes)
+    
+
+cont_cubes = iris.load(diag_dir + 'aer_burden_mmr_bc_br793_time_mean.pp')
+
+cont_zonal_mean_cubes = []
+
+for cube in cont_cubes:
+    cont_zonal_mean_cubes.append(cube.collapsed('longitude', iris.analysis.MEAN))
+    
+
+plt.figure()
+qplt.pcolormesh(cont_zonal_mean_cubes[1])
+plt.ylim(0,30000)
+plt.show()
+
+
+
+
+pert_cubes = iris.load(diag_dir + 'aer_burden_mmr_bc_ce067_time_mean.pp')
+
+pert_zonal_mean_cubes = []
+
+for cube in pert_cubes:
+    pert_zonal_mean_cubes.append(cube.collapsed('longitude', iris.analysis.MEAN))
+    
+
+plt.figure()
+qplt.pcolormesh(pert_zonal_mean_cubes[1])
+plt.ylim(0,30000)
+plt.show()
+
+
+diff = cont_zonal_mean_cubes[2] - pert_zonal_mean_cubes[2]
+
+plt.figure()
+qplt.pcolormesh(diff)
+plt.ylim(0,30000)
+plt.show()
+    
+
+
+    
+    
