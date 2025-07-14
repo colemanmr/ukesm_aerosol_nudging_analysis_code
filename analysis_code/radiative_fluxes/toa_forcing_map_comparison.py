@@ -7,13 +7,13 @@ Created on Tue Nov 24 10:29:27 2020
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
 import numpy as np
 import iris
 import iris.plot as iplt
 import matplotlib.pyplot as plt
-import diagnostics.file_locations_module as file_loc
+import analysis_code.file_locations_module as file_loc
 
 
 # Set forcing input filenames (free, uv, uvt templates)

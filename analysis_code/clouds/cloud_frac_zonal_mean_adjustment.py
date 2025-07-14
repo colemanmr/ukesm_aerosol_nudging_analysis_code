@@ -12,12 +12,12 @@ perturbed suites, including error estimation, and plotting cross section
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
 import iris
 import numpy as np
-import diagnostics.file_locations_module as file_loc
-import diagnostics.radiative_fluxes.fluxes_module as flux_mod
+import analysis_code.file_locations_module as file_loc
+import analysis_code.radiative_fluxes.fluxes_module as flux_mod
 import iris.plot as iplt
 import iris.quickplot as qplt
 import matplotlib.pyplot as plt

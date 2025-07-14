@@ -7,10 +7,10 @@ Created on Mon May 17 15:11:36 2021
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
-import diagnostics.radiative_fluxes.fluxes_module as flux_mod
-import diagnostics.file_locations_module as file_loc
+import analysis_code.radiative_fluxes.fluxes_module as flux_mod
+import analysis_code.file_locations_module as file_loc
 import numpy as np
 import iris
 import iris.plot as iplt

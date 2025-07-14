@@ -12,10 +12,10 @@ for control error and adjustment for time slice experiments
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
-import diagnostics.radiative_fluxes.fluxes_module as flux_mod
-import diagnostics.file_locations_module as file_loc
+import analysis_code.radiative_fluxes.fluxes_module as flux_mod
+import analysis_code.file_locations_module as file_loc
 import numpy as np
 import iris
 import iris.plot as iplt
@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import copy
 
 # set directory name 
-diag_folder = 'nudging_testing_new/uv_wind/'
+diag_folder = 'uv_wind/'
 diag_dir = file_loc.diag_dir + diag_folder
 
 # load free cont uv data

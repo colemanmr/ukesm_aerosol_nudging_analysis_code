@@ -7,8 +7,8 @@ Created on Wed Jan  6 10:35:41 2021
 """
 
 import iris
-import diagnostics.file_locations_module as file_loc
-import diagnostics.radiative_fluxes.fluxes_module as flux_mod
+import analysis_code.file_locations_module as file_loc
+import analysis_code.radiative_fluxes.fluxes_module as flux_mod
 
 diag_dir = file_loc.diag_dir + 'net_flux/'
 

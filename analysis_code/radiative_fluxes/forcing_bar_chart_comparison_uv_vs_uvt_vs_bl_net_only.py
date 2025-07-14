@@ -7,7 +7,7 @@ Created on Sun Nov 22 12:48:51 2020
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
 import iris
 import numpy as np

@@ -7,12 +7,12 @@ Created on Tue Sep  5 17:16:49 2023
 """
 
 import sys
-sys.path.append('/home/users/nn819853/Documents/python_code')
+sys.path.append('/home/maxco/ukesm_aerosol_nudging_analysis_code/')
 
 
 import numpy as np
 import matplotlib.pyplot as plt
-import diagnostics.file_locations_module as file_loc
+import analysis_code.file_locations_module as file_loc
 import character_shortcuts as char
 import iris
 

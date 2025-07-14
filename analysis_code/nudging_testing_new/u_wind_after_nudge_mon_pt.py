@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 import iris
 import iris.plot as iplt
 import iris.quickplot as qplt
-import diagnostics.radiative_fluxes.fluxes_module as flux_mod
-import diagnostics.file_locations_module as file_loc
+import analysis_code.radiative_fluxes.fluxes_module as flux_mod
+import analysis_code.file_locations_module as file_loc
 import iris.analysis
 import character_shortcuts as char
 

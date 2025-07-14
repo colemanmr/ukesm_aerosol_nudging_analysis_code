@@ -8,7 +8,7 @@ Created on Fri Nov  6 10:25:23 2020
 
 import numpy as np
 import matplotlib.pyplot as plt
-import diagnostics.file_locations_module as file_loc
+import analysis_code.file_locations_module as file_loc
 
 plot_dir = file_loc.plot_dir + 'net_fluxes/'
 
